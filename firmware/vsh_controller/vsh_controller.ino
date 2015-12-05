@@ -1,5 +1,5 @@
 #include "GnusbuinoMIDI.h"
-
+#include "Timer.h"
 
 unsigned char sensorValue[96];
 unsigned char serialBuffer[7];
@@ -11,8 +11,8 @@ unsigned int  temp;
 unsigned char sentButtons;
 unsigned char lastButtons[8];      
 
-unsigned long lastSPI;
 unsigned char serialIdx;
+Timer t;
 
 
 void setup() {
@@ -21,7 +21,13 @@ void setup() {
     DDRB = (1 << 7)|(1 << 4);  //CLK/SS/ Latch
     SPCR = (1 << SPE)|(1 << MSTR)|(1 << SPR0);  //SPI
     
-    	Serial.begin(57600);
+    t.every(20,checkMIDI);
+    t.every(10,checkSPI);
+    t.every(1,checkSerial);
+    
+    
+    Serial.begin(57600);
+    
 }
 
 unsigned char SPI_transmit(unsigned char cData) {
@@ -30,51 +36,64 @@ unsigned char SPI_transmit(unsigned char cData) {
 	return SPDR;
 }
 
+	//----------------------------------- check SPI
+void checkSPI(void) {
+	unsigned char noteOns, noteOffs;
+
+	PORTB |= (1 << 4); // latch
+	for (j = 0; j<8; j++ ) {
+		temp = SPI_transmit(0);
+		temp = ~temp;
+
+		if (temp != lastButtons[j]) {
+			
+			noteOns = temp & ~lastButtons[j];
+			noteOffs = ~temp & lastButtons[j];
+			for (i = 0; i < 8; i++) {
+				if (noteOns & (1 << i)) {
+					MIDI.write(MIDI_NOTEON, j*8 + i, 127);
+				}
+			if (noteOffs & (1 << i)) {
+					MIDI.write(MIDI_NOTEON, j*8 + i, 0);
+				}
+			}
+							
+		}
+		lastButtons[j] = temp;
+	}
+	PORTB &= ~(1 << 4); // latch
+}
+
+
+//----------------------------------- check Serial	
+void checkSerial(void) {
+	if (Serial.available()) {
+		temp = Serial.read(); 
+		if (serialBuffer[serialIdx] != temp) {
+			serialBuffer[serialIdx] = temp;
+			MIDI.write(MIDI_CONTROLCHANGE,90+serialIdx,temp); 
+		}
+		serialIdx++;
+	} else {
+		serialIdx = 0;
+	}
+}
+
+
+void checkMIDI(void) {
+
+	for (i = 0; i < 96; i++) {	
+		if (sensorValue[i] != sentValue[i]) {
+			MIDI.write(MIDI_CONTROLCHANGE,i,sensorValue[i]); 
+			sentValue[i] = sensorValue[i];
+		}
+	}
+}
+
 
 void loop() {
-	unsigned char noteOns, noteOffs;
-	//----------------------------------- check SPI
-	if (millis()-lastSPI > 1) {
-		PORTB |= (1 << 4); // latch
-		for (j = 0; j<8; j++ ) {
-			temp = SPI_transmit(0);
-			temp = ~temp;
-
-			if (temp != lastButtons[j]) {
-				
-				noteOns = temp & ~lastButtons[j];
-				noteOffs = ~temp & lastButtons[j];
-				for (i = 0; i < 8; i++) {
-					if (noteOns & (1 << i)) {
-						MIDI.write(MIDI_NOTEON, j*8 + i, 127);
-					}
-				if (noteOffs & (1 << i)) {
-						MIDI.write(MIDI_NOTEON, j*8 + i, 0);
-					}
-				}
-								
-			}
-			lastButtons[j] = temp;
-		}
-
-		PORTB &= ~(1 << 4); // latch
-			
-		//----------------------------------- check Serial	
-
-		if (Serial.available()) {
-			temp = Serial.read(); 
-			if (serialBuffer[serialIdx] != temp) {
-				serialBuffer[serialIdx] = temp;
-				MIDI.write(MIDI_CONTROLCHANGE,90+serialIdx,temp); 
-			}
-			serialIdx++;
-		} else {
-			serialIdx = 0;
-		}
-
-		lastSPI = millis();
-	}
-
+	t.update();
+	
 	//----------------------------------- check Analog	
 	mux_ext++;
 	if (mux_ext >= 16) {
@@ -82,7 +101,7 @@ void loop() {
 		mux_int++;
 		if (mux_int >= 5) {
 			mux_int = 0;
-			delay(20);
+			return;
 		}
 	}
 
@@ -93,10 +112,6 @@ void loop() {
 	temp = (sensorValue[idx] + temp ) / 2;
 	
 	sensorValue[idx] = temp; 
-	if (sensorValue[idx] != sentValue[idx]) {
-		MIDI.write(MIDI_CONTROLCHANGE,idx,sensorValue[idx]); 
-		sentValue[idx] = sensorValue[idx];
-	}
 }
 
 
