@@ -1,0 +1,66 @@
+<jittershader name="vsh_lumakey">
+	<param name="lumcoeff" type="vec4" default="0.299 .587 0.114 0." />
+	<param name="q" type="float" default="0." />
+	<language name="glsl" version="1.0">
+		<bind param="q" program="fp" />
+		<bind param="lumcoeff" program="fp" />
+		<program name="vp" type="vertex" source="sh.passthru.xform.vp.glsl" />
+		<program name="fp" type="fragment">
+<![CDATA[
+
+// texcoords
+varying vec2 texcoord0;
+
+// samplers
+uniform sampler2DRect tex0;
+uniform float q;
+uniform vec4 lumcoeff;
+
+
+// entry point
+void main()
+{   
+
+	vec4 rgba_val = texture2DRect(tex0, texcoord0);
+
+	// calculate our luminance
+	float y = dot(rgba_val,lumcoeff);
+	
+	
+/*
+	CCIR 601/ITU-R. more info on http://www.fourcc.org
+	Y: 0. - 1. normalized to the range (16-235)
+	U/V(Cb/Cr): -0.5 - 0.5 to the range (0-255), 
+	though UV looks like it's not using full range 
+	here in QT, so we're doing some extra scaling (16-242)
+
+	Y  = 0.299R + 0.587G + 0.114B
+	Cb = (B-Y)*0.565
+	Cr = (R-Y)*0.713
+
+	with reciprocal versions:
+	R = Y + 1.403Cr
+	G = Y - 0.344Cb - 0.714Cr
+	B = Y + 1.770Cb	
+
+*/		
+	if (q < 0.) { 
+		rgba_val.a = clamp(-3. * y + (4. + 3.* q),0.,1.);
+	} else  {
+		rgba_val.a = clamp(3. * y + (1. - 3.* q),0.,1.);
+	}
+	
+	
+	gl_FragColor = rgba_val;
+}
+
+]]>
+		</program>
+	</language>
+</jittershader>
+
+
+
+
+
+
