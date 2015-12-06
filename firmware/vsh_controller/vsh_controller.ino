@@ -30,6 +30,13 @@ void setup() {
     
 }
 
+void forceSend (void) {
+	for (i = 0; i < 96; i++) {	
+			MIDI.write(MIDI_CONTROLCHANGE,i,sensorValue[i]); 
+			delay(20);
+	}
+}
+
 unsigned char SPI_transmit(unsigned char cData) {
 	SPDR = cData;
 	while(!(SPSR & (1 << SPIF))){ ; }
@@ -38,7 +45,7 @@ unsigned char SPI_transmit(unsigned char cData) {
 
 	//----------------------------------- check SPI
 void checkSPI(void) {
-	unsigned char noteOns, noteOffs;
+	unsigned char noteOns, noteOffs,noteIdx;
 
 	PORTB |= (1 << 4); // latch
 	for (j = 0; j<8; j++ ) {
@@ -50,11 +57,18 @@ void checkSPI(void) {
 			noteOns = temp & ~lastButtons[j];
 			noteOffs = ~temp & lastButtons[j];
 			for (i = 0; i < 8; i++) {
+				
+				noteIdx = j*8 + i;
 				if (noteOns & (1 << i)) {
-					MIDI.write(MIDI_NOTEON, j*8 + i, 127);
+					MIDI.write(MIDI_NOTEON, noteIdx, 127);
+					
+					if (noteIdx == 63) forceSend();
+					
 				}
+				
+				
 			if (noteOffs & (1 << i)) {
-					MIDI.write(MIDI_NOTEON, j*8 + i, 0);
+					MIDI.write(MIDI_NOTEON, noteIdx, 0);
 				}
 			}
 							
