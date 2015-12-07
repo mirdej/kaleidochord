@@ -2,7 +2,7 @@
 #include "Timer.h"
 
 unsigned char sensorValue[96];
-unsigned char serialBuffer[7];
+unsigned char serialBuffer[8];
 
 unsigned char sentValue[96];
 unsigned char mux_ext,i,j,idx;
@@ -81,11 +81,30 @@ void checkSPI(void) {
 
 //----------------------------------- check Serial	
 void checkSerial(void) {
+	unsigned char noteOns, noteOffs,noteIdx;
+
 	if (Serial.available()) {
+		if (serialIdx >= 8) return;
+		
 		temp = Serial.read(); 
+		
 		if (serialBuffer[serialIdx] != temp) {
+			if (serialIdx < 7) {
+				MIDI.write(MIDI_CONTROLCHANGE,90+serialIdx,temp); 
+			} else {
+				noteOns = temp & ~serialBuffer[serialIdx];
+				noteOffs = ~temp & serialBuffer[serialIdx];
+				for (noteIdx = 0; noteIdx < 8; noteIdx++) {
+					if (noteOns & (1 << noteIdx)) {
+						MIDI.write(MIDI_NOTEON, noteIdx+90, 127);
+					}
+					if (noteOffs & (1 << noteIdx)) {
+						MIDI.write(MIDI_NOTEON, noteIdx+90, 0);
+					}
+				}
+			}
 			serialBuffer[serialIdx] = temp;
-			MIDI.write(MIDI_CONTROLCHANGE,90+serialIdx,temp); 
+
 		}
 		serialIdx++;
 	} else {

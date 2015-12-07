@@ -24,6 +24,7 @@ signed int top[7];
 signed int bottom[7];
 signed int threshold[7];
 unsigned char state[7];
+unsigned char depressed;
 
 double t;
 unsigned char mux, pass, p,i;
@@ -61,7 +62,8 @@ void sendData(void) {
 	for (i = 0; i < 7; i++){
 		    Serial.write(sensorValue[i]);
 	}
-	digitalWrite(16,HIGH);
+	Serial.write(depressed);
+	//digitalWrite(16,HIGH);
 }
 
 
@@ -175,6 +177,7 @@ void loop() {
 
 
 	if (temp > threshold[mux]) { 
+		depressed |= (1 << mux);
 		t = (double)temp;
 		t = (t - bottom[mux]) / (top[mux] - bottom[mux]);
 		if (t < 0) t = 0;
@@ -194,6 +197,7 @@ void loop() {
 		//sensorValue[mux] = t;
 		state[mux] = STATE_FINGER;
 	} else {
+		depressed &= ~(1 << mux);
 		if (state[mux] == STATE_FINGER) {// we lost the finger
 			p = pass + 1;
 			p %= HIST_SIZE;
