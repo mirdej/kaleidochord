@@ -46,7 +46,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 349.0, 307.0, 109.0, 22.0 ],
-					"presentation_rect" : [ 352.0, 304.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "knobcolor 1 1 0. 1."
 				}
@@ -191,7 +190,7 @@
 					"patching_rect" : [ 399.0, 93.0, 58.0, 22.0 ],
 					"style" : "",
 					"text" : "autopattr",
-					"varname" : "u967014997"
+					"varname" : "u448005053"
 				}
 
 			}
@@ -808,7 +807,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 630.193237, 579.0, 68.0, 22.0 ],
 					"style" : "",
-					"text" : "s #1_v_flip"
+					"text" : "s #1_flip_v"
 				}
 
 			}
@@ -820,7 +819,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 613.840149, 551.0, 69.0, 22.0 ],
 					"style" : "",
-					"text" : "s #1_h_flip"
+					"text" : "s #1_flip_h"
 				}
 
 			}

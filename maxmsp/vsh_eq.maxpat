@@ -53,12 +53,12 @@
 				"box" : 				{
 					"id" : "obj-30",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 6,
 					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 305.0, 531.0, 29.5, 22.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 305.0, 531.0, 96.0, 22.0 ],
 					"style" : "",
-					"text" : "* 2."
+					"text" : "scale 0. 1. -1. 1."
 				}
 
 			}
