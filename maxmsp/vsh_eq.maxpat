@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 38.0, 79.0, 857.0, 687.0 ],
+		"rect" : [ 38.0, 79.0, 999.0, 888.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,19 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-31",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_gl_texture", "" ],
+					"patching_rect" : [ 53.0, 647.0, 214.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.gl.texture #1 @name #2_eq_texture"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-32",
 					"maxclass" : "message",
@@ -418,7 +431,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 632.0, 25.0, 25.0 ],
+					"patching_rect" : [ 20.0, 686.0, 25.0, 25.0 ],
 					"style" : ""
 				}
 
@@ -2148,6 +2161,15 @@
 					"hidden" : 0,
 					"midpoints" : [ 274.5, 285.0, 30.5, 285.0 ],
 					"source" : [ "obj-27", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-28", 0 ]
 				}
 
 			}

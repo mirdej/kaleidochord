@@ -39,6 +39,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_gl_texture", "" ],
+					"patching_rect" : [ 141.0, 258.0, 223.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.gl.texture 0_main @name #1_source "
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -731,7 +744,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 11.0, 253.0, 29.0, 29.0 ],
+					"patching_rect" : [ 11.0, 308.0, 29.0, 29.0 ],
 					"style" : ""
 				}
 
@@ -803,7 +816,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 185.0, 474.0, 34.0, 22.0 ],
-									"presentation_rect" : [ 186.5, 475.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "gate"
 								}
@@ -8574,6 +8586,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 20.5, 249.0, 150.5, 249.0 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-78", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -8602,31 +8624,31 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "vb.speedgauge.js",
-				"bootpath" : "~/Documents/development/videoscheitholt/maxmsp",
+				"bootpath" : "~/Documents/Max 7/videoscheitholt/maxmsp",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vb.levelgauge.js",
-				"bootpath" : "~/Documents/development/videoscheitholt/maxmsp",
+				"bootpath" : "~/Documents/Max 7/videoscheitholt/maxmsp",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vb.triggerhandler.js",
-				"bootpath" : "~/Documents/development/videoscheitholt/maxmsp",
+				"bootpath" : "~/Documents/Max 7/videoscheitholt/maxmsp",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vb.setting.maxpat",
-				"bootpath" : "~/Documents/development/videoscheitholt/maxmsp",
+				"bootpath" : "~/Documents/Max 7/videoscheitholt/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jv.gl.tween.maxpat",
-				"bootpath" : "~/Documents/development/videoscheitholt/maxmsp",
+				"bootpath" : "~/Documents/Max 7/videoscheitholt/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
 			}

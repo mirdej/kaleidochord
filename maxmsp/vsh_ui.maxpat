@@ -282,15 +282,28 @@
 						"subpatcher_template" : "standard",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 406.0, 365.0, 92.0, 22.0 ],
+									"style" : "",
+									"text" : "window getsize"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-52",
 									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 401.166748, 269.0, 238.0, 35.0 ],
+									"patching_rect" : [ 402.166748, 269.5, 238.0, 35.0 ],
 									"style" : "",
-									"text" : "window size -722 150 0 635, window flags notitle, window exec"
+									"text" : "window size -720 280 0 773, window flags notitle, window exec"
 								}
 
 							}
@@ -378,9 +391,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 125.166748, 282.5, 228.0, 22.0 ],
+									"patching_rect" : [ 125.166748, 282.5, 159.0, 22.0 ],
 									"style" : "",
-									"text" : "window size -720 155 -17 635"
+									"text" : "window size -720 288 0 773"
 								}
 
 							}
@@ -416,6 +429,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-3", 0 ]
 								}
 
 							}
@@ -518,7 +540,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 607.0, 303.0, 92.0, 22.0 ],
+					"patching_rect" : [ 607.0, 336.0, 92.0, 22.0 ],
 					"style" : "",
 					"text" : "window getsize"
 				}
@@ -532,7 +554,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 598.0, 290.0, 69.0, 22.0 ],
+					"patching_rect" : [ 611.0, 314.0, 69.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"style" : "",
 					"text" : "thispatcher"
@@ -570,7 +592,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "vsh_ui_channel.maxpat",
-				"bootpath" : "~/Documents/development/videoscheitholt/maxmsp",
+				"bootpath" : "~/Documents/Max 7/videoscheitholt/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
