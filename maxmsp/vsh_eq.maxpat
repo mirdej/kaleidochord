@@ -489,9 +489,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 46.0, 173.5, 292.0, 21.0 ],
+					"patching_rect" : [ 46.0, 173.5, 199.0, 21.0 ],
 					"style" : "",
-					"text" : "jit.gl.imageunit #1 @fx \"Color Invert\" @colormode uyvy"
+					"text" : "jit.gl.imageunit #1 @fx \"Color Invert\" "
 				}
 
 			}
@@ -1041,9 +1041,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 21.0, 319.333344, 306.0, 21.0 ],
+					"patching_rect" : [ 21.0, 319.333344, 214.0, 21.0 ],
 					"style" : "",
-					"text" : "jit.gl.imageunit #1 @fx \"Color Controls\" @colormode uyvy"
+					"text" : "jit.gl.imageunit #1 @fx \"Color Controls\" "
 				}
 
 			}
@@ -1952,9 +1952,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 21.0, 464.333344, 326.0, 21.0 ],
+					"patching_rect" : [ 21.0, 464.333344, 234.0, 21.0 ],
 					"style" : "",
-					"text" : "jit.gl.imageunit #1 @fx \"White Point Adjust\" @colormode uyvy"
+					"text" : "jit.gl.imageunit #1 @fx \"White Point Adjust\" "
 				}
 
 			}
@@ -1968,9 +1968,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 21.0, 381.333344, 308.0, 21.0 ],
+					"patching_rect" : [ 21.0, 381.333344, 215.0, 21.0 ],
 					"style" : "",
-					"text" : "jit.gl.imageunit #1 @fx \"Gamma Adjust\" @colormode uyvy"
+					"text" : "jit.gl.imageunit #1 @fx \"Gamma Adjust\" "
 				}
 
 			}

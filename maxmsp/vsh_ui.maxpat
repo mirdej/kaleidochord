@@ -86,7 +86,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 573.5, 178.0, 56.0, 17.0 ],
-					"presentation_rect" : [ 593.0, 182.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "vcam delay",
 					"textcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ]
@@ -152,7 +151,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -72.0, -75.0 ],
-					"patching_rect" : [ 84.0, 8.0, 476.0, 78.0 ],
+					"patching_rect" : [ 53.0, 8.0, 507.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 257.0, 202.0, 128.0, 128.0 ],
 					"varname" : "vsh_ui_channel[6]",
@@ -176,7 +175,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -72.0, -75.0 ],
-					"patching_rect" : [ 85.0, 74.0, 476.0, 78.0 ],
+					"patching_rect" : [ 54.0, 74.0, 507.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 254.0, 118.0, 128.0, 128.0 ],
 					"varname" : "vsh_ui_channel[5]",
@@ -200,7 +199,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -72.0, -75.0 ],
-					"patching_rect" : [ 85.0, 140.0, 476.0, 78.0 ],
+					"patching_rect" : [ 54.0, 140.0, 507.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 167.0, 30.0, 128.0, 128.0 ],
 					"varname" : "vsh_ui_channel[4]",
@@ -224,7 +223,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -72.0, -75.0 ],
-					"patching_rect" : [ 86.0, 207.0, 476.0, 78.0 ],
+					"patching_rect" : [ 55.0, 207.0, 507.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 150.0, 58.0, 128.0, 128.0 ],
 					"varname" : "vsh_ui_channel[3]",
@@ -248,7 +247,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -72.0, -75.0 ],
-					"patching_rect" : [ 85.0, 274.0, 476.0, 78.0 ],
+					"patching_rect" : [ 54.0, 274.0, 507.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 59.0, 131.0, 128.0, 128.0 ],
 					"varname" : "vsh_ui_channel[2]",
@@ -272,7 +271,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -72.0, -75.0 ],
-					"patching_rect" : [ 86.0, 340.0, 476.0, 79.0 ],
+					"patching_rect" : [ 55.0, 340.0, 507.0, 79.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 55.0, 233.0, 128.0, 128.0 ],
 					"varname" : "vsh_ui_channel[1]",
@@ -296,7 +295,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -72.0, -75.0 ],
-					"patching_rect" : [ 86.0, 406.0, 476.0, 79.0 ],
+					"patching_rect" : [ 55.0, 406.0, 507.0, 79.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 194.0, 99.0, 128.0, 128.0 ],
 					"varname" : "vsh_ui_channel",
@@ -352,6 +351,45 @@
 						"style" : "",
 						"subpatcher_template" : "standard",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"patching_rect" : [ 454.0, 165.0, 24.0, 22.0 ],
+									"style" : "",
+									"text" : "t 0"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 454.0, 133.0, 63.0, 22.0 ],
+									"style" : "",
+									"text" : "delay 100"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 454.0, 100.0, 60.0, 22.0 ],
+									"style" : "",
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-3",
 									"maxclass" : "message",
@@ -505,10 +543,28 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-5", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-4", 0 ]
 								}
 
 							}
@@ -581,6 +637,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-52", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-50", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-8", 0 ]
 								}
 
 							}
