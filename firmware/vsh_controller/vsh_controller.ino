@@ -33,7 +33,10 @@ void setup() {
 void forceSend (void) {
 	for (i = 0; i < 96; i++) {	
 			MIDI.write(MIDI_CONTROLCHANGE,i,sensorValue[i]); 
-			delay(5);
+			checkSerial();
+			delay(2);
+			checkSerial();
+			delay(2);
 	}
 }
 
