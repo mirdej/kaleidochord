@@ -40,13 +40,27 @@
 		"subpatcher_template" : "standard",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontsize" : 9.0,
+					"id" : "obj-21",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 677.0, 244.0, 38.0, 17.0 ],
+					"presentation_rect" : [ 670.5, 249.0, 0.0, 0.0 ],
+					"style" : "",
+					"text" : "Z-Pos",
+					"textcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
 					"patching_rect" : [ 642.0, 558.0, 41.0, 22.0 ],
-					"presentation_rect" : [ 617.0, 513.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "/ 255."
 				}
@@ -61,7 +75,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 589.5, 586.0, 49.0, 22.0 ],
-					"presentation_rect" : [ 589.0, 586.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "ctlin 67"
 				}
@@ -88,7 +101,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 618.5, 178.0, 38.0, 17.0 ],
-					"presentation_rect" : [ 618.0, 178.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "fb-blur",
 					"textcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ]
@@ -106,7 +118,6 @@
 					"outlettype" : [ "float" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 618.5, 154.0, 35.0, 35.0 ],
-					"presentation_rect" : [ 618.0, 154.0, 0.0, 0.0 ],
 					"size" : 256.0,
 					"style" : ""
 				}
@@ -120,7 +131,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 617.5, 201.0, 28.0, 17.0 ],
-					"presentation_rect" : [ 617.0, 201.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "stk"
 				}
@@ -438,6 +448,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "standard",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-8",
@@ -498,9 +509,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 402.166748, 269.5, 238.0, 35.0 ],
+									"patching_rect" : [ 402.166748, 269.5, 225.0, 35.0 ],
 									"style" : "",
-									"text" : "window size -720 280 0 773, window flags notitle, window exec"
+									"text" : "window size -720 0 0 640, window flags notitle, window exec"
 								}
 
 							}
@@ -590,7 +601,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 125.166748, 282.5, 159.0, 22.0 ],
 									"style" : "",
-									"text" : "window size -720 288 0 773"
+									"text" : "window size -720 280 0 773"
 								}
 
 							}
