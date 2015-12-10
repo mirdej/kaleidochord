@@ -137,7 +137,7 @@ void loop() {
 		mux_int++;
 		if (mux_int >= 5) {
 			mux_int = 0;
-			return;
+//return;
 		}
 	}
 
