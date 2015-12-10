@@ -3,6 +3,7 @@ function paint()
 	var val = box.getvalueof()[0]; // this is an array of size 1
 	var viewsize = mgraphics.size;
 	var valrange = box.getattr("size");
+	var mode = box.getattr("mode");
 	var degrees = box.getattr("degrees");
 	var thickness = box.getattr("thickness");
 	var width = viewsize[0];
@@ -25,13 +26,18 @@ function paint()
 	
 	mgraphics.set_source_rgba(box.getattr("needlecolor"));
 
-	val = val * 2. - 1.
-	if (val < 0) {
-		end = -1.57 + (270. / 360 * 3.14 * val);
-		mgraphics.arc_negative(0,0,.9,-1.57,end)
+	if (mode) {
+		val = val * 2. - 1.
+		if (val < 0) {
+			end = -1.57 + (270. / 360 * 3.14 * val);
+			mgraphics.arc_negative(0,0,.9,-1.57,end)
+		} else {
+			end = -1.57 + (270. / 360 * 3.14 * val);
+			mgraphics.arc(0,0,.9,-1.57,end)
+		}
 	} else {
-		end = -1.57 + (270. / 360 * 3.14 * val);
-		mgraphics.arc(0,0,.9,-1.57,end)
+			
+			mgraphics.arc(0,0,.9,2.355,(270. / 360 * 6.28 * val)+2.355);
 	}
 	mgraphics.stroke();
 
