@@ -39,6 +39,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-34",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 595.0, 279.0, 85.0, 22.0 ],
+					"style" : "",
+					"text" : "scale 1.666 1."
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-35",
 					"maxclass" : "number",
 					"numinlets" : 1,
@@ -824,7 +837,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 443.0, 237.0, 223.0, 22.0 ],
+					"patching_rect" : [ 443.0, 323.0, 223.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.videoplane proj @scale 1.333 1 . 1."
 				}
@@ -1011,6 +1024,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-33", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-34", 0 ]
 				}
 
 			}
