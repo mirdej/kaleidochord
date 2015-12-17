@@ -1,10 +1,10 @@
-#include "GnusbuinoMIDI.h"
+#include "vsh_MIDI.h"
 #include "Timer.h"
 
-unsigned char sensorValue[96];
+unsigned char sensorValue[97];
 unsigned char serialBuffer[8];
 
-unsigned char sentValue[96];
+unsigned char sentValue[97];
 unsigned char mux_ext,i,j,idx;
 unsigned char mux_int;
 unsigned int  temp;
@@ -31,7 +31,7 @@ void setup() {
 }
 
 void forceSend (void) {
-	for (i = 0; i < 96; i++) {	
+	for (i = 0; i < 97; i++) {	
 			MIDI.write(MIDI_CONTROLCHANGE,i,sensorValue[i]); 
 			checkSerial();
 			delay(2);
@@ -93,7 +93,7 @@ void checkSerial(void) {
 		
 		if (serialBuffer[serialIdx] != temp) {
 			if (serialIdx < 7) {
-				MIDI.write(MIDI_CONTROLCHANGE,90+serialIdx,temp); 
+				sensorValue[90+serialIdx] = temp; 
 			} else {
 				noteOns = temp & ~serialBuffer[serialIdx];
 				noteOffs = ~temp & serialBuffer[serialIdx];
@@ -118,7 +118,7 @@ void checkSerial(void) {
 
 void checkMIDI(void) {
 
-	for (i = 0; i < 96; i++) {	
+	for (i = 0; i < 97; i++) {	
 		if (sensorValue[i] != sentValue[i]) {
 			MIDI.write(MIDI_CONTROLCHANGE,i,sensorValue[i]); 
 			sentValue[i] = sensorValue[i];
