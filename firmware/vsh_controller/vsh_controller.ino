@@ -1,8 +1,13 @@
+#include "usbdrv.h"
 #include "vsh_MIDI.h"
 #include "Timer.h"
+#include <avr/wdt.h>
+
 
 unsigned char sensorValue[97];
 unsigned char serialBuffer[8];
+
+unsigned char midiOutData[4];
 
 unsigned char sentValue[97];
 unsigned char mux_ext,i,j,idx;
@@ -30,9 +35,32 @@ void setup() {
     
 }
 
+
+void MIDIwrite(unsigned char a, unsigned char b, unsigned char c) {
+		while (!usbInterruptIsReady()) {
+			
+     			usbPoll();
+     			wdt_reset();
+     			checkSerial();
+
+
+		}	// ready to send some MIDI ?
+			
+			unsigned char cmd;
+			cmd = a;
+
+			midiOutData[0] = ((cmd >>4 ) & 0x0F) | ((cmd << 4) & 0xF0); //swap high/low nibble
+			midiOutData[1] = cmd;
+			midiOutData[2] = b;
+			midiOutData[3] = c;
+			
+			usbSetInterrupt(midiOutData, 4);
+			
+}
+
 void forceSend (void) {
 	for (i = 0; i < 97; i++) {	
-			MIDI.write(MIDI_CONTROLCHANGE,i,sensorValue[i]); 
+			MIDIwrite(MIDI_CONTROLCHANGE,i,sensorValue[i]); 
 			checkSerial();
 			delay(2);
 			checkSerial();
@@ -63,7 +91,7 @@ void checkSPI(void) {
 				
 				noteIdx = j*8 + i;
 				if (noteOns & (1 << i)) {
-					MIDI.write(MIDI_NOTEON, noteIdx, 127);
+					MIDIwrite(MIDI_NOTEON, noteIdx, 127);
 					
 					if (noteIdx == 63) forceSend();
 					
@@ -71,7 +99,7 @@ void checkSPI(void) {
 				
 				
 			if (noteOffs & (1 << i)) {
-					MIDI.write(MIDI_NOTEON, noteIdx, 0);
+					MIDIwrite(MIDI_NOTEON, noteIdx, 0);
 				}
 			}
 							
@@ -99,10 +127,10 @@ void checkSerial(void) {
 				noteOffs = ~temp & serialBuffer[serialIdx];
 				for (noteIdx = 0; noteIdx < 8; noteIdx++) {
 					if (noteOns & (1 << noteIdx)) {
-						MIDI.write(MIDI_NOTEON, noteIdx+90, 127);
+						MIDIwrite(MIDI_NOTEON, noteIdx+90, 127);
 					}
 					if (noteOffs & (1 << noteIdx)) {
-						MIDI.write(MIDI_NOTEON, noteIdx+90, 0);
+						MIDIwrite(MIDI_NOTEON, noteIdx+90, 0);
 					}
 				}
 			}
@@ -116,11 +144,12 @@ void checkSerial(void) {
 }
 
 
+
 void checkMIDI(void) {
 
 	for (i = 0; i < 97; i++) {	
 		if (sensorValue[i] != sentValue[i]) {
-			MIDI.write(MIDI_CONTROLCHANGE,i,sensorValue[i]); 
+			MIDIwrite(MIDI_CONTROLCHANGE, i, sensorValue[i]);
 			sentValue[i] = sensorValue[i];
 		}
 	}
