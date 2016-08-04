@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 48.0, 79.0, 1706.0, 964.0 ],
+		"rect" : [ 370.0, 696.0, 1706.0, 964.0 ],
 		"bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 		"editing_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 		"bglocked" : 0,
@@ -39,6 +39,18 @@
 		"style" : "",
 		"subpatcher_template" : "standard",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-36",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1565.0, 57.0, 56.0, 22.0 ],
+					"style" : "",
+					"text" : "onecopy"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -5369,14 +5381,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-9",
-									"linecount" : 6,
+									"linecount" : 3,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 754.0, 426.0, 50.0, 89.0 ],
 									"style" : "",
-									"text" : "param zoom 0.557551 0.557551"
+									"text" : "param zoom 0. 0."
 								}
 
 							}
