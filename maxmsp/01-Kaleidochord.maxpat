@@ -40,6 +40,46 @@
 		"subpatcher_template" : "standard",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-54",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 636.0, 460.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "192.168.0.22"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-48",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 763.0, 232.0, 60.0, 22.0 ],
+					"style" : "",
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-47",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 763.0, 260.0, 70.0, 22.0 ],
+					"style" : "",
+					"text" : "whatismyip"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -120,7 +160,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 217.0, 79.0, 978.0, 687.0 ],
+						"rect" : [ 217.0, 79.0, 494.0, 687.0 ],
 						"bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -435,7 +475,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 35.0, 79.0, 982.0, 687.0 ],
+										"rect" : [ 38.0, 79.0, 982.0, 687.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -462,7 +502,6 @@
 										"tags" : "",
 										"style" : "",
 										"subpatcher_template" : "",
-										"visible" : 1,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-39",
@@ -930,7 +969,7 @@
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 589.0, 293.0, 103.0, 22.0 ],
 													"saved_object_attributes" : 													{
-														"filename" : "vsh.load.media",
+														"filename" : "vsh.load.media.js",
 														"parameter_enable" : 0
 													}
 ,
@@ -1585,6 +1624,15 @@
 											}
 , 											{
 												"patchline" : 												{
+													"destination" : [ "obj-29", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-6", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
 													"destination" : [ "obj-35", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
@@ -1654,7 +1702,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 168.0, 707.0, 135.0, 22.0 ],
+									"patching_rect" : [ 168.0, 703.0, 135.0, 22.0 ],
 									"style" : "",
 									"text" : "vsh_channel_handler 0"
 								}
@@ -4519,6 +4567,24 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-47", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-47", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-48", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-24", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
@@ -4538,61 +4604,61 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "vsh_ui_channel.maxpat",
-				"bootpath" : "~/Documents/Max 7/kaleidochordtest",
+				"bootpath" : "~/Documents/development/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vsh_ctlin.maxpat",
-				"bootpath" : "~/Documents/Max 7/kaleidochordtest",
+				"bootpath" : "~/Documents/development/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vsh_stringin.maxpat",
-				"bootpath" : "~/Documents/Max 7/kaleidochordtest",
+				"bootpath" : "~/Documents/development/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "whatismyip.maxpat",
-				"bootpath" : "~/Documents/Max 7/Library/pgc-bastel",
+				"bootpath" : "~/Documents/development/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vsh_channel_handler.maxpat",
-				"bootpath" : "~/Documents/Max 7/kaleidochordtest",
+				"bootpath" : "~/Documents/development/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vb.triggerhandler.js",
-				"bootpath" : "~/Documents/Max 7/kaleidochordtest",
+				"bootpath" : "~/Documents/development/kaleidochord/maxmsp",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vb.setting.maxpat",
-				"bootpath" : "~/Documents/Max 7/kaleidochordtest",
+				"bootpath" : "~/Documents/development/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vb.filmstrip.maxpat",
-				"bootpath" : "~/Documents/Max 7/kaleidochordtest",
+				"bootpath" : "~/Documents/development/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vb.filmstrip.js",
-				"bootpath" : "~/Documents/Max 7/kaleidochordtest",
+				"bootpath" : "~/Documents/development/kaleidochord/maxmsp",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vsh.load.media.js",
-				"bootpath" : "~/Documents/Max 7/kaleidochordtest",
+				"bootpath" : "~/Documents/development/kaleidochord/maxmsp",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
