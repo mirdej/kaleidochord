@@ -96,9 +96,11 @@ function start(){
 
 	//-------------------- Look for scales in 
 	f = new Folder (scale_path);
+	post(scale_path);
 	while (!f.end) {
 		 if (f.filename){			// js sees invisible files at beginning of folder???
  			scales.push(scale_path+f.filename)
+ 			post(scale_path+f.filename);post();
  			outlet(0,"menu","append",f.filename); // clear scale menu
   	 	}
   	 	f.next();
