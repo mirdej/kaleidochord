@@ -25,7 +25,7 @@ function msg_int (idx) {
 	
 	current_clip = idx;
 	outlet(o_messages,'playing_clip',idx);
-	outlet(o_play,'read',paths[idx].split('/')[-1]);
+	outlet(o_play,'read',paths[idx]);
 }
 
 function unfold(state) {
