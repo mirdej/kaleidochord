@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 2,
-			"revision" : 1,
+			"revision" : 4,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
@@ -179,12 +179,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 2,
-							"revision" : 1,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 						"bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 						"editing_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 						"bglocked" : 0,
@@ -566,7 +566,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.007399, 0.00222, 0.00222, 0.005549 ],
+					"bgcolor" : [ 0.584319, 0.175296, 0.175296, 0.438239 ],
 					"id" : "obj-59",
 					"maxclass" : "panel",
 					"mode" : 0,
@@ -582,7 +582,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.3, 1.0, 0.3, 0.75 ],
+					"bgcolor" : [ 0.087802, 0.292672, 0.087802, 0.219504 ],
 					"id" : "obj-58",
 					"maxclass" : "panel",
 					"mode" : 0,
@@ -598,7 +598,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.3, 0.3, 1.0, 0.75 ],
+					"bgcolor" : [ 0.022805, 0.022805, 0.076015, 0.057011 ],
 					"id" : "obj-57",
 					"maxclass" : "panel",
 					"mode" : 0,
@@ -742,7 +742,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 738.0, -3.0, 92.0, 22.0 ],
+					"patching_rect" : [ 824.0, 181.0, 92.0, 22.0 ],
 					"style" : "",
 					"text" : "scale 0 255 0 6"
 				}
@@ -756,9 +756,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 738.0, -41.0, 85.0, 22.0 ],
+					"patching_rect" : [ 978.0, 181.0, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 56"
+					"text" : "ctlin gnusb 55"
 				}
 
 			}
@@ -773,7 +773,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 2,
-							"revision" : 1,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -827,7 +827,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_gl_texture", "" ],
-									"patching_rect" : [ 635.0, 657.0, 230.0, 22.0 ],
+									"patching_rect" : [ 672.0, 662.0, 230.0, 22.0 ],
 									"style" : "",
 									"text" : "jit.gl.texture 3_strip @name 3_eq_texture"
 								}
@@ -995,7 +995,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "bang", "bang", "bang", "bang" ],
-									"patching_rect" : [ 168.0, 669.0, 50.5, 22.0 ],
+									"patching_rect" : [ 168.0, 662.0, 166.5, 22.0 ],
 									"style" : "",
 									"text" : "b 4"
 								}
@@ -1075,7 +1075,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 2,
-											"revision" : 1,
+											"revision" : 4,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -2906,12 +2906,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 2,
-							"revision" : 1,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ -142.0, 79.0, 1388.0, 935.0 ],
+						"rect" : [ 34.0, 79.0, 1043.0, 640.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2938,7 +2938,33 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-26",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 299.0, 305.0, 24.0, 24.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 336.0, 167.0, 50.0, 22.0 ],
+									"style" : "",
+									"text" : "72"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"comment" : "",
 									"id" : "obj-41",
@@ -3495,6 +3521,16 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-26", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 298.0, 316.0 ],
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -3724,6 +3760,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-37", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-38", 0 ]
 								}
 
 							}
@@ -4473,7 +4518,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 2,
-							"revision" : 1,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
