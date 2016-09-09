@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 38.0, 79.0, 1242.0, 699.0 ],
+		"rect" : [ 34.0, 79.0, 1212.0, 687.0 ],
 		"bgcolor" : [ 0.509804, 0.509804, 0.509804, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -198,7 +198,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 434.0, 246.0, 47.0, 22.0 ],
+					"patching_rect" : [ 434.0, 248.0, 47.0, 22.0 ],
 					"style" : "",
 					"text" : "s #1_q"
 				}
@@ -995,7 +995,7 @@
 					"fontsize" : 12.0,
 					"id" : "obj-78",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patcher" : 					{
@@ -1008,7 +1008,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 34.0, 98.0, 1665.0, 832.0 ],
+						"rect" : [ 34.0, 79.0, 1212.0, 687.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1091,7 +1091,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 833.0, 128.0, 640.0, 480.0 ],
+										"rect" : [ 606.0, 128.0, 640.0, 480.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1139,7 +1139,7 @@
 													"outlettype" : [ "int", "int" ],
 													"patching_rect" : [ 558.5, 94.0, 34.0, 22.0 ],
 													"style" : "",
-													"text" : "t 1 0"
+													"text" : "t 0 0"
 												}
 
 											}
@@ -1566,25 +1566,12 @@
 							}
 , 							{
 								"box" : 								{
-									"comment" : "",
-									"id" : "obj-69",
-									"maxclass" : "inlet",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 1080.5, 33.5, 30.0, 30.0 ],
-									"style" : ""
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-65",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 132.5, 484.0, 34.0, 22.0 ],
+									"patching_rect" : [ 132.5, 478.0, 34.0, 22.0 ],
 									"style" : "",
 									"text" : "gate"
 								}
@@ -1978,15 +1965,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-65", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-9", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-69", 0 ]
 								}
 
 							}
