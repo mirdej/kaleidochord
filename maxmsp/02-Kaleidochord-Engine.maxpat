@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 370.0, 79.0, 1351.0, 1083.0 ],
+		"rect" : [ 989.0, 103.0, 1351.0, 1083.0 ],
 		"bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 		"editing_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 		"bglocked" : 0,
@@ -83,6 +83,33 @@
 						"subpatcher_template" : "standard",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-79",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 123.0, 87.0, 71.0, 22.0 ],
+									"style" : "",
+									"text" : "r remote_ip"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"linecount" : 2,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 186.0, 198.0, 50.0, 35.0 ],
+									"style" : "",
+									"text" : "connected 0"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-51",
@@ -125,6 +152,15 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-4", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-1", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -138,6 +174,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-51", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-79", 0 ]
 								}
 
 							}
@@ -263,17 +308,17 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-6",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
-									"patching_rect" : [ 721.5, 568.0, 449.0, 35.0 ],
+									"patching_rect" : [ 721.5, 568.0, 509.0, 22.0 ],
 									"style" : "",
-									"text" : "regexp \"(Macintosh HD:/Users/kaleidochord/Videobass Recordings/)\" @substitute kaleidochord:/Videobass Recordings"
+									"text" : "regexp \"(kaleidochord/Videobass Recordings/)\" @substitute \"vk/share/Videobass Recordings\""
 								}
 
 							}
@@ -339,7 +384,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 978.5, 113.0, 169.0, 76.0 ],
 									"style" : "",
-									"text" : "write \"Macintosh HD:/Users/kaleidochord/Videobass Recordings/Recording000.mov\" 30 jpeg"
+									"text" : "write \"Macintosh HD:/Users/kaleidochord/Videobass Recordings/Recording000.mov\" 25 jpeg"
 								}
 
 							}
@@ -2378,7 +2423,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 684.0, 58.0, 50.0, 22.0 ],
+					"patching_rect" : [ 756.0, 64.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -2390,7 +2435,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 648.0, 15.0, 56.0, 22.0 ],
+					"patching_rect" : [ 720.0, 21.0, 56.0, 22.0 ],
 					"style" : "",
 					"text" : "r 0_level"
 				}
