@@ -308,7 +308,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-6",
@@ -1112,12 +1111,12 @@
 									"fontsize" : 12.0,
 									"id" : "obj-79",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "int", "" ],
-									"patching_rect" : [ 477.0, 35.0, 218.0, 22.0 ],
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 477.0, 26.0, 113.0, 22.0 ],
 									"style" : "",
-									"text" : "hi.in panel @usagepage button @idx 2"
+									"text" : "r live_record_pedal"
 								}
 
 							}
@@ -11842,12 +11841,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "vb.setting.maxpat",
-				"bootpath" : "~/Documents/Max 7/kaleidochord/maxmsp",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "vsh_eq.maxpat",
 				"bootpath" : "~/Documents/Max 7/kaleidochord/maxmsp",
 				"type" : "JSON",
@@ -11873,6 +11866,12 @@
 			}
 , 			{
 				"name" : "videosender.maxpat",
+				"bootpath" : "~/Documents/Max 7/kaleidochord/maxmsp",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "vb.setting.maxpat",
 				"bootpath" : "~/Documents/Max 7/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1

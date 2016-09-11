@@ -109,13 +109,38 @@
 						"subpatcher_template" : "standard",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-13",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 3,
+									"outlettype" : [ "bang", "bang", "" ],
+									"patching_rect" : [ 299.0, 95.5, 173.0, 22.0 ],
+									"style" : "",
+									"text" : "sel 192.168.0.33 192.168.0.22"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 299.0, 68.5, 57.0, 22.0 ],
+									"style" : "",
+									"text" : "route set"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-65",
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 447.5, 649.0, 69.0, 22.0 ],
-									"presentation_rect" : [ 459.5, 570.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "load media"
 								}
@@ -142,7 +167,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 831.0, 703.0, 88.0, 22.0 ],
-									"presentation_rect" : [ 787.5, 724.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "connection ok."
 								}
@@ -195,7 +219,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 936.5, 287.0, 165.0, 22.0 ],
-									"presentation_rect" : [ 939.0, 287.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "wait for connection to Engine"
 								}
@@ -222,7 +245,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1261.5, 727.0, 129.0, 22.0 ],
-									"presentation_rect" : [ 1221.0, 774.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "sharepoint is mounted"
 								}
@@ -302,7 +324,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1249.0, 403.0, 96.0, 62.0 ],
-									"presentation_rect" : [ 1218.0, 412.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "wait for remote Videobass Recordings to appear"
 								}
@@ -342,7 +363,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1236.5, 643.0, 58.0, 22.0 ],
-									"presentation_rect" : [ 1229.0, 495.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "aka.shell"
 								}
@@ -356,7 +376,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 1372.0, 365.5, 40.0, 22.0 ],
-									"presentation_rect" : [ 1232.0, 361.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "zl reg"
 								}
@@ -370,7 +389,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1393.0, 336.5, 71.0, 22.0 ],
-									"presentation_rect" : [ 1253.0, 332.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "r remote_ip"
 								}
@@ -384,7 +402,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1490.0, 719.0, 71.0, 22.0 ],
-									"presentation_rect" : [ 1376.0, 310.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "r remote_ip"
 								}
@@ -398,7 +415,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 750.0, 514.0, 40.0, 22.0 ],
-									"presentation_rect" : [ 373.0, 281.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "zl reg"
 								}
@@ -411,7 +427,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1625.0, 182.0, 73.0, 22.0 ],
-									"presentation_rect" : [ 1259.0, 516.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "s remote_ip"
 								}
@@ -1772,19 +1787,6 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-13",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 1609.0, 63.0, 60.0, 22.0 ],
-									"style" : "",
-									"text" : "loadbang"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-9",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -1817,7 +1819,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1372.0, 411.0, 189.0, 49.0 ],
+									"patching_rect" : [ 1372.0, 411.0, 190.0, 49.0 ],
 									"style" : "",
 									"text" : "sprintf symout mount -t smbfs //kaleidochord:@%s/kaleidochord ~/remote"
 								}
@@ -1882,7 +1884,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 276.0, 343.0, 60.0, 22.0 ],
+									"patching_rect" : [ 276.0, 9.0, 60.0, 22.0 ],
 									"style" : "",
 									"text" : "loadbang"
 								}
@@ -1895,7 +1897,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 276.0, 371.0, 70.0, 22.0 ],
+									"patching_rect" : [ 276.0, 37.0, 70.0, 22.0 ],
 									"style" : "",
 									"text" : "whatismyip"
 								}
@@ -1979,6 +1981,15 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-13", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-11", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1992,7 +2003,8 @@
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-13", 0 ]
+									"midpoints" : [ 385.5, 127.5, 1002.0, 127.5, 1002.0, 91.0, 1618.5, 91.0 ],
+									"source" : [ "obj-13", 1 ]
 								}
 
 							}
@@ -2140,6 +2152,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-45", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-47", 0 ]
 								}
 
 							}
@@ -6322,6 +6343,31 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 601.0, 127.0, 73.0, 22.0 ],
+									"style" : "",
+									"text" : "s to_engine"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 601.0, 87.0, 135.0, 22.0 ],
+									"style" : "",
+									"text" : "prepend live_rec_pedal"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-26",
 									"maxclass" : "button",
 									"numinlets" : 1,
@@ -6673,7 +6719,7 @@
 									"numinlets" : 5,
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
-									"patching_rect" : [ 431.5, 181.0, 105.0, 22.0 ],
+									"patching_rect" : [ 431.5, 141.0, 105.0, 22.0 ],
 									"style" : "",
 									"text" : "route 72 73 74 75"
 								}
@@ -6686,7 +6732,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 431.5, 150.0, 56.0, 22.0 ],
+									"patching_rect" : [ 431.5, 111.0, 56.0, 22.0 ],
 									"style" : "",
 									"text" : "pack 0 0"
 								}
@@ -6699,7 +6745,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "int", "int" ],
-									"patching_rect" : [ 431.5, 116.0, 115.0, 22.0 ],
+									"patching_rect" : [ 431.5, 53.0, 115.0, 22.0 ],
 									"style" : "",
 									"text" : "notein pedalognusb"
 								}
@@ -7020,6 +7066,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -7182,10 +7237,19 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-46", 0 ],
+									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-43", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-46", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-43", 2 ]
 								}
 
 							}
