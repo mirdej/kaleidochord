@@ -402,7 +402,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 186.0, 198.0, 50.0, 35.0 ],
 									"style" : "",
-									"text" : "connected 1"
+									"text" : "connected 0"
 								}
 
 							}
@@ -606,13 +606,53 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-62",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 39.0, 274.5, 72.0, 22.0 ],
+									"style" : "",
+									"text" : "loadmess 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-60",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 39.0, 309.0, 85.0, 22.0 ],
+									"style" : "",
+									"text" : "qmetro 20000"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"patching_rect" : [ 39.0, 360.0, 29.5, 22.0 ],
+									"style" : "",
+									"text" : "i"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-59",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 73.0, 120.0, 66.0, 22.0 ],
+									"patching_rect" : [ 39.0, 420.0, 66.0, 22.0 ],
 									"style" : "",
 									"text" : "s to_zither"
 								}
@@ -627,7 +667,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 73.0, 86.0, 165.0, 22.0 ],
+									"patching_rect" : [ 39.0, 386.0, 165.0, 22.0 ],
 									"style" : "",
 									"text" : "prepend vb_has_video_input"
 								}
@@ -655,7 +695,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 761.75, 602.0, 455.5, 22.0 ],
 									"style" : "",
-									"text" : "Macintosh HD:/Users/vk/remote/Videobass Recordings/Recording001.mov"
+									"text" : "Macintosh HD:/Users/vk/remote/Videobass Recordings/Recording002.mov"
 								}
 
 							}
@@ -747,7 +787,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 978.5, 113.0, 169.0, 76.0 ],
 									"style" : "",
-									"text" : "write \"Macintosh HD:/Users/kaleidochord/Videobass Recordings/Recording001.mov\" 30 jpeg"
+									"text" : "write \"Macintosh HD:/Users/kaleidochord/Videobass Recordings/Recording002.mov\" 30 jpeg"
 								}
 
 							}
@@ -1690,6 +1730,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-57", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-16", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1934,6 +1983,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-10", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-37", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-38", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1954,15 +2012,6 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-5", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-37", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-57", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-37", 0 ]
@@ -2222,10 +2271,28 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-60", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-64", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-61", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-60", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-62", 0 ]
 								}
 
 							}
@@ -10820,14 +10887,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-6",
-									"linecount" : 6,
+									"linecount" : 4,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 463.0, 381.0, 50.0, 49.0 ],
 									"style" : "",
-									"text" : "levels 0. 0.996078 0.996078 0."
+									"text" : "levels 0. 0. 0.710927 0."
 								}
 
 							}
