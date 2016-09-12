@@ -402,7 +402,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 186.0, 198.0, 50.0, 35.0 ],
 									"style" : "",
-									"text" : "connected 0"
+									"text" : "connected 1"
 								}
 
 							}
@@ -655,7 +655,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 761.75, 602.0, 455.5, 22.0 ],
 									"style" : "",
-									"text" : "Macintosh HD:/Users/vk/remote/Videobass Recordings/Recording007.mov"
+									"text" : "Macintosh HD:/Users/vk/remote/Videobass Recordings/Recording001.mov"
 								}
 
 							}
@@ -747,7 +747,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 978.5, 113.0, 169.0, 76.0 ],
 									"style" : "",
-									"text" : "write \"Macintosh HD:/Users/kaleidochord/Videobass Recordings/Recording007.mov\" 25 jpeg"
+									"text" : "write \"Macintosh HD:/Users/kaleidochord/Videobass Recordings/Recording001.mov\" 30 jpeg"
 								}
 
 							}
@@ -3414,7 +3414,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 247.0, 273.0, 50.0, 35.0 ],
 									"style" : "",
-									"text" : "0."
+									"text" : "0.2"
 								}
 
 							}
@@ -7278,7 +7278,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 754.0, 426.0, 140.0, 22.0 ],
 									"style" : "",
-									"text" : "param zoom 0. 0."
+									"text" : "param theta 0."
 								}
 
 							}
@@ -10820,14 +10820,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-6",
-									"linecount" : 3,
+									"linecount" : 6,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 463.0, 381.0, 50.0, 49.0 ],
 									"style" : "",
-									"text" : "levels 0. 0. 0. 0."
+									"text" : "levels 0. 0.996078 0.996078 0."
 								}
 
 							}
