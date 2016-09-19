@@ -6,7 +6,8 @@
 
 #define STATE_NOT_CALIBRATING 0
 #define STATE_SET_THRESHES 1
-#define STATE_CALIBRATE_STRINGS 2
+#define STATE_CALIBRATE_BOTTOM 2
+#define STATE_CALIBRATE_TOP 3
 
 #define STATE_FINGER 1
 #define STATE_NO_FINGER 2
@@ -118,35 +119,46 @@ void loop() {
 	buttons = !digitalRead(0);
 	if (buttons) {
 		if (!lastbuttons) {
-			if(calibrating_state) {
-				// write data to eeprom;
-				for (i = 0; i < 7; i++) {
-					//sanitize data
-					if (abs(threshold[i]-180) > 150) 	threshold[i] = 180;
-					if (bottom[i] < threshold[i]) { saveBottomRead(i);}
-					if (top[i] < bottom[i]) { saveTopRead(i);}
-				
-					eeprom_write_word((uint16_t*)(i*2),threshold[i]);
-					eeprom_write_word((uint16_t*)(14 + i*2),bottom[i]);
-					eeprom_write_word((uint16_t*)(28 + i*2),top[i]);	
-									
+								// click of a button
+			switch (calibrating_state) {
+				case STATE_NOT_CALIBRATING: {
+					calibrating_state = STATE_SET_THRESHES;
+					mux = 0;
+					digitalWrite(16,HIGH);
+					break;
 				}
-				delay(100);
-				ledEvent = timer.oscillate(16, 100, HIGH);
-				timer.after(2000,stopLed);
-				calibrating_state = STATE_NOT_CALIBRATING;
-			} else {			
-				calibrating_state = STATE_SET_THRESHES;
-				mux = 0;
-				digitalWrite(16,HIGH);
+				
+				case STATE_CALIBRATE_BOTTOM: {
+					calibrating_state = STATE_CALIBRATE_TOP;
+					stopLed();
+					ledEvent = timer.oscillate(16, 500, HIGH);
+					break;
+				}
+
+				case STATE_CALIBRATE_TOP: {
+					for (i = 0; i < 7; i++) {
+						eeprom_write_word((uint16_t*)(i*2),threshold[i]);
+						eeprom_write_word((uint16_t*)(14 + i*2),bottom[i]);
+						eeprom_write_word((uint16_t*)(28 + i*2),top[i]);	
+									
+					}
+					stopLed();
+					delay(200);
+					ledEvent = timer.oscillate(16, 100, HIGH);
+					timer.after(2000,stopLed);
+					calibrating_state = STATE_NOT_CALIBRATING;
+					break;
+				}
+					
 			}
-		}
+		}	
 	} 
 	lastbuttons = buttons;
 	
 	if (mux >= 7) {
 		if (calibrating_state == STATE_SET_THRESHES) {
-			calibrating_state = STATE_CALIBRATE_STRINGS;
+			calibrating_state = STATE_CALIBRATE_BOTTOM;
+			ledEvent = timer.oscillate(16, 1000, HIGH);
 		}
 		mux = 0;
 		pass++;
@@ -159,20 +171,21 @@ void loop() {
 	
 	
 	if (calibrating_state == STATE_SET_THRESHES) {
-		threshold[mux] = temp + 10;
+		threshold[mux] 	= temp + 5;
+		bottom[mux] 	= threshold[mux] + 1;
+		top[mux] 		= threshold[mux] + 100;
 	}
-	if (calibrating_state == STATE_CALIBRATE_STRINGS) {
-		if (temp > 450) {	
+	if (calibrating_state == STATE_CALIBRATE_TOP) {
 			if ( temp > top[mux]) {
 				top[mux] = temp; 
 			}
-		} else {
-			if (temp > threshold[mux]) 
-				if ( temp > bottom[mux]) {
-					bottom[mux] = temp;
-				}
-		}
 	}
+	if (calibrating_state == STATE_CALIBRATE_BOTTOM) {
+			if ( temp > bottom[mux]) {
+				bottom[mux] = temp; 
+			}
+	}
+
 	
 
 
@@ -206,15 +219,6 @@ void loop() {
 		state[mux] = STATE_NO_FINGER;
 	}
 
-
-/*
-
-		if (sensorValue[mux] != sentValue[mux]) {
-
-			MIDI.write(MIDI_CONTROLCHANGE,mux,sensorValue[mux]);
-			sentValue[mux] = sensorValue[mux]; 
-		}
-*/
 	timer.update();
 }
 
