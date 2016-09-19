@@ -39,7 +39,7 @@ var placeholder_render = new JitterObject ("jit.gl.render", "blank") ;
     placeholder_render.erase_color = [0., 0., 0.5, 1.] ;
     placeholder_render.blend_enable = 1 ;
 	
-var placeholder_text = new JitterObject ("jit.gl.text2d", "blank") ;
+var placeholder_text = new JitterObject ("jit.gl.text", "blank") ;
     placeholder_text.blend_enable = 1 ;
 	placeholder_text.depth_enable = 0 ;
     placeholder_text.color = [1., 1., 1., 1.] ; 
