@@ -40,6 +40,45 @@
 		"subpatcher_template" : "standard",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-56",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1242.0, 593.0, 35.0, 22.0 ],
+					"presentation_rect" : [ 1240.0, 593.0, 0.0, 0.0 ],
+					"style" : "",
+					"text" : "read"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-53",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1204.0, 508.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-45",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1213.0, 457.0, 65.0, 22.0 ],
+					"style" : "",
+					"text" : "r 4_trigger"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-48",
 					"linecount" : 2,
 					"maxclass" : "message",
@@ -82,7 +121,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 816.0, 56.0, 1328.0, 1240.0 ],
+						"rect" : [ 816.0, 79.0, 1328.0, 1240.0 ],
 						"bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 						"editing_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 						"bglocked" : 0,
@@ -118,7 +157,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1036.0, 96.0, 72.0, 22.0 ],
+									"patching_rect" : [ 1036.0, 146.0, 72.0, 22.0 ],
 									"style" : "",
 									"text" : "loadmess 0"
 								}
@@ -526,7 +565,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 292.0, 554.0, 50.0, 49.0 ],
 									"style" : "",
-									"text" : "vsh_ui_channel"
+									"text" : "vsh_ui_channel[3]"
 								}
 
 							}
@@ -1432,13 +1471,69 @@
 			}
 , 			{
 				"box" : 				{
+					"autorestore" : "vzh_presets.json",
 					"id" : "obj-29",
+					"interp" : 					{
+						"vsh_ui_channel::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[1]::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel[1]::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[1]::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[1]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[2]::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel[2]::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[2]::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[2]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[3]::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel[3]::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[3]::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[3]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[4]::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel[4]::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[4]::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[4]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[5]::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel[5]::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[5]::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[5]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[6]::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel[6]::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[6]::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[6]::invert" : [ 2, 0.5 ]
+					}
+,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1007.0, 634.5, 223.0, 22.0 ],
+					"patching_rect" : [ 1007.0, 634.5, 143.0, 22.0 ],
+					"priority" : 					{
+						"vsh_ui_channel::unfold" : -2,
+						"vsh_ui_channel::clip_num" : -1,
+						"vsh_ui_channel[1]::unfold" : -2,
+						"vsh_ui_channel[1]::clip_num" : -1,
+						"vsh_ui_channel[2]::unfold" : -2,
+						"vsh_ui_channel[2]::clip_num" : -1,
+						"vsh_ui_channel[3]::unfold" : -2,
+						"vsh_ui_channel[3]::clip_num" : -1,
+						"vsh_ui_channel[4]::unfold" : -2,
+						"vsh_ui_channel[4]::clip_num" : -1,
+						"vsh_ui_channel[5]::unfold" : -2,
+						"vsh_ui_channel[5]::clip_num" : -1,
+						"vsh_ui_channel[6]::unfold" : -2,
+						"vsh_ui_channel[6]::clip_num" : -1
+					}
+,
+					"saved_object_attributes" : 					{
+						"client_rect" : [ 4, 45, 493, 916 ],
+						"parameter_enable" : 0,
+						"storage_rect" : [ 583, 69, 1034, 197 ]
+					}
+,
 					"style" : "",
+					"text" : "pattrstorage vzh_presets",
 					"varname" : "vzh_presets"
 				}
 
@@ -10253,6 +10348,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-53", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-45", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -10302,6 +10406,15 @@
 					"disabled" : 0,
 					"hidden" : 1,
 					"source" : [ "obj-51", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-56", 0 ]
 				}
 
 			}
@@ -10526,6 +10639,12 @@
 				"name" : "vsh.load.media.js",
 				"bootpath" : "~/Documents/Max 7/kaleidochord/maxmsp",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "vzh_presets.json",
+				"bootpath" : "~/Documents/Max 7/kaleidochord/maxmsp",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
