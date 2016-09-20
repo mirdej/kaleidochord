@@ -3639,6 +3639,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "standard",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-32",
@@ -4945,30 +4946,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-12",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 428.60083, 492.0, 70.0, 22.0 ],
-					"style" : "",
-					"text" : "s #1_mode"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-70",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 511.682556, 492.0, 73.0, 22.0 ],
-					"style" : "",
-					"text" : "s to_engine"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-51",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -5682,20 +5659,6 @@
 					"patching_rect" : [ 683.535645, 448.0, 68.0, 22.0 ],
 					"style" : "",
 					"text" : "send swap"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-93",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 511.682556, 404.0, 77.603027, 35.0 ],
-					"style" : "",
-					"text" : "prepend #1_mode"
 				}
 
 			}
@@ -6877,7 +6840,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.1, 0.1, 0.1, 1.0 ],
+					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"bgoncolor" : [ 0.639216, 0.458824, 0.070588, 1.0 ],
 					"fontsize" : 9.0,
 					"id" : "obj-2",
@@ -6891,9 +6854,9 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 371.464294, 75.612068, 23.466667, 26.137928 ],
 					"style" : "",
-					"text" : "MODE",
+					"text" : " ",
 					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"texton" : "MODE",
+					"texton" : " ",
 					"usebgoncolor" : 1,
 					"usetextovercolor" : 1
 				}
@@ -8124,15 +8087,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-92", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-70", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-93", 0 ]
 				}
 
 			}
