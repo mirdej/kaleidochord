@@ -40,42 +40,194 @@
 		"subpatcher_template" : "standard",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-73",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 1121.0, 223.0, 70.0, 22.0 ],
+					"restore" : [ 0.0 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "pattr attack",
+					"varname" : "attack[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-71",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 813.0, 228.0, 70.0, 22.0 ],
+					"restore" : [ 0.0 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "pattr decay",
+					"varname" : "decay"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-56",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 629.0, 801.5, 77.0, 22.0 ],
+					"restore" : [ 0.0 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "pattr sk_blur",
+					"varname" : "sk_blur"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-53",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 504.0, 789.0, 75.0, 22.0 ],
+					"restore" : [ 0.0 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "pattr fb_blur",
+					"varname" : "fb_blur"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-52",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1242.0, 593.0, 35.0, 22.0 ],
-					"presentation_rect" : [ 1240.0, 593.0, 0.0, 0.0 ],
+					"patching_rect" : [ 1445.0, 357.0, 34.0, 22.0 ],
+					"presentation_rect" : [ 1446.0, 359.5, 0.0, 0.0 ],
 					"style" : "",
-					"text" : "read"
+					"text" : "prev"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-48",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1089.0, 719.0, 146.0, 35.0 ],
+					"patching_rect" : [ 1445.0, 390.5, 33.0, 22.0 ],
 					"style" : "",
-					"text" : "pattrstorage vzh_presets @savemode 3"
+					"text" : "next"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-47",
-					"maxclass" : "message",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "vsh_pattrstorage-interface.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1162.0, 593.0, 36.0, 22.0 ],
+					"patching_rect" : [ 1212.0, 357.0, 210.0, 261.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 1050.499878, 448.0, 210.0, 261.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"interp" : 					{
+						"vsh_ui_channel::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[1]::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel[1]::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[1]::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[1]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[2]::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel[2]::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[2]::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[2]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[3]::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel[3]::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[3]::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[3]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[4]::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel[4]::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[4]::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[4]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[5]::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel[5]::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[5]::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[5]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[6]::clip_live" : [ 2, 0.5 ],
+						"vsh_ui_channel[6]::h_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[6]::v_flip" : [ 2, 0.5 ],
+						"vsh_ui_channel[6]::invert" : [ 2, 0.5 ]
+					}
+,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1110.0, 675.0, 75.0, 22.0 ],
+					"priority" : 					{
+						"vsh_ui_channel::clip_num" : -1,
+						"vsh_ui_channel::unfold" : -2,
+						"vsh_ui_channel[1]::clip_num" : -1,
+						"vsh_ui_channel[1]::unfold" : -2,
+						"vsh_ui_channel[2]::clip_num" : -1,
+						"vsh_ui_channel[2]::unfold" : -2,
+						"vsh_ui_channel[3]::clip_num" : -1,
+						"vsh_ui_channel[3]::unfold" : -2,
+						"vsh_ui_channel[4]::clip_num" : -1,
+						"vsh_ui_channel[4]::unfold" : -2,
+						"vsh_ui_channel[5]::clip_num" : -1,
+						"vsh_ui_channel[5]::unfold" : -2,
+						"vsh_ui_channel[6]::clip_num" : -1,
+						"vsh_ui_channel[6]::unfold" : -2
+					}
+,
+					"saved_object_attributes" : 					{
+						"client_rect" : [ 100, 100, 500, 600 ],
+						"parameter_enable" : 0,
+						"storage_rect" : [ 200, 200, 800, 500 ]
+					}
+,
 					"style" : "",
-					"text" : "write"
+					"text" : "pattrstorage",
+					"varname" : "u726003603"
 				}
 
 			}
@@ -1441,75 +1593,6 @@
 ,
 					"style" : "",
 					"text" : "p swap_channels"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"autorestore" : "vzh_presets.json",
-					"id" : "obj-29",
-					"interp" : 					{
-						"vsh_ui_channel::clip_live" : [ 2, 0.5 ],
-						"vsh_ui_channel::h_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel::v_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel::invert" : [ 2, 0.5 ],
-						"vsh_ui_channel[1]::clip_live" : [ 2, 0.5 ],
-						"vsh_ui_channel[1]::h_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[1]::v_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[1]::invert" : [ 2, 0.5 ],
-						"vsh_ui_channel[2]::clip_live" : [ 2, 0.5 ],
-						"vsh_ui_channel[2]::h_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[2]::v_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[2]::invert" : [ 2, 0.5 ],
-						"vsh_ui_channel[3]::clip_live" : [ 2, 0.5 ],
-						"vsh_ui_channel[3]::h_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[3]::v_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[3]::invert" : [ 2, 0.5 ],
-						"vsh_ui_channel[4]::clip_live" : [ 2, 0.5 ],
-						"vsh_ui_channel[4]::h_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[4]::v_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[4]::invert" : [ 2, 0.5 ],
-						"vsh_ui_channel[5]::clip_live" : [ 2, 0.5 ],
-						"vsh_ui_channel[5]::h_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[5]::v_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[5]::invert" : [ 2, 0.5 ],
-						"vsh_ui_channel[6]::clip_live" : [ 2, 0.5 ],
-						"vsh_ui_channel[6]::h_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[6]::v_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[6]::invert" : [ 2, 0.5 ]
-					}
-,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1007.0, 634.5, 143.0, 22.0 ],
-					"priority" : 					{
-						"vsh_ui_channel::unfold" : -2,
-						"vsh_ui_channel::clip_num" : -1,
-						"vsh_ui_channel[1]::unfold" : -2,
-						"vsh_ui_channel[1]::clip_num" : -1,
-						"vsh_ui_channel[2]::unfold" : -2,
-						"vsh_ui_channel[2]::clip_num" : -1,
-						"vsh_ui_channel[3]::unfold" : -2,
-						"vsh_ui_channel[3]::clip_num" : -1,
-						"vsh_ui_channel[4]::unfold" : -2,
-						"vsh_ui_channel[4]::clip_num" : -1,
-						"vsh_ui_channel[5]::unfold" : -2,
-						"vsh_ui_channel[5]::clip_num" : -1,
-						"vsh_ui_channel[6]::unfold" : -2,
-						"vsh_ui_channel[6]::clip_num" : -1
-					}
-,
-					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 45, 493, 916 ],
-						"parameter_enable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
-					}
-,
-					"style" : "",
-					"text" : "pattrstorage vzh_presets",
-					"varname" : "vzh_presets"
 				}
 
 			}
@@ -6734,7 +6817,8 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 1137.5, 152.0, 65.0, 65.0 ],
 					"size" : 256.0,
-					"style" : ""
+					"style" : "",
+					"varname" : "dial[3]"
 				}
 
 			}
@@ -6809,7 +6893,8 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 1196.0, 152.0, 65.0, 65.0 ],
 					"size" : 256.0,
-					"style" : ""
+					"style" : "",
+					"varname" : "dial[2]"
 				}
 
 			}
@@ -9152,7 +9237,8 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 989.0, 197.0, 65.0, 65.0 ],
 					"size" : 256.0,
-					"style" : ""
+					"style" : "",
+					"varname" : "dial"
 				}
 
 			}
@@ -9228,7 +9314,8 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 1021.233398, 240.0, 65.0, 65.0 ],
 					"size" : 256.0,
-					"style" : ""
+					"style" : "",
+					"varname" : "dial[1]"
 				}
 
 			}
@@ -10233,6 +10320,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-47", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-54", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -10332,6 +10428,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-47", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-48", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-24", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
@@ -10377,10 +10482,28 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-29", 0 ],
+					"destination" : [ "obj-47", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-56", 0 ]
+					"source" : [ "obj-52", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-53", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-56", 1 ]
 				}
 
 			}
@@ -10435,6 +10558,24 @@
 					"disabled" : 0,
 					"hidden" : 1,
 					"source" : [ "obj-69", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-61", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-71", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-73", 1 ]
 				}
 
 			}
@@ -10608,7 +10749,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "vzh_presets.json",
+				"name" : "vsh_pattrstorage-interface.maxpat",
 				"bootpath" : "~/Documents/Max 7/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
@@ -10627,6 +10768,10 @@
 			}
 , 			{
 				"name" : "aka.shell.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "aalert.mxo",
 				"type" : "iLaX"
 			}
  ],

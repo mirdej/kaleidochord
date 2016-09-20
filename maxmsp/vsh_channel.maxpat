@@ -108,6 +108,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-1",
@@ -141,9 +142,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 235.0, 360.0, 82.0, 22.0 ],
+									"patching_rect" : [ 235.0, 360.0, 113.0, 22.0 ],
 									"style" : "",
-									"text" : "prepend read"
+									"text" : "prepend asyncread"
 								}
 
 							}
