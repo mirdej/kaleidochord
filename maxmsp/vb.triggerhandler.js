@@ -18,6 +18,7 @@ function set_clip (idx,path) {
 }
 
 function msg_int (idx) {
+	if (paths.length == 0) return;
 	
 	if (idx < 0) {error("clip out of range: ",idx); return;}
 	if (idx >= paths.length) {error("clip out of range: ",idx); return;}
