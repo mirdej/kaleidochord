@@ -3634,7 +3634,7 @@
 						"textcolor" : [ 0.764706, 0.592157, 0.101961, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 902.5, 442.0, 69.0, 22.0 ],
+					"patching_rect" : [ 902.5, 376.0, 69.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -7155,7 +7155,7 @@
 						"textcolor" : [ 0.764706, 0.592157, 0.101961, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 1073.5, 442.0, 66.0, 22.0 ],
+					"patching_rect" : [ 1073.5, 376.0, 66.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -10156,7 +10156,7 @@
 						"textcolor" : [ 0.764706, 0.592157, 0.101961, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 1244.5, 442.0, 56.5, 22.0 ],
+					"patching_rect" : [ 1244.5, 376.0, 56.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -10178,7 +10178,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "bang" ],
-					"patching_rect" : [ 902.5, 404.0, 361.0, 22.0 ],
+					"patching_rect" : [ 902.5, 338.0, 361.0, 22.0 ],
 					"style" : "",
 					"text" : "b 3"
 				}
@@ -10543,7 +10543,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 812.0, 442.0, 51.0, 22.0 ],
+					"patching_rect" : [ 812.0, 376.0, 51.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -10567,7 +10567,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 902.5, 487.0, 533.0, 22.0 ],
+					"patching_rect" : [ 902.5, 421.0, 533.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.slab 0_main @inputs 4 @file vsh_send_mix.jxs @adapt 1"
 				}
@@ -10646,7 +10646,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 1163.5, 540.0, 272.0, 22.0 ],
+					"patching_rect" : [ 1163.5, 474.0, 272.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.texture 0_main @name fb_texture @adapt 1"
 				}
@@ -11245,7 +11245,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 902.5, 540.0, 226.0, 22.0 ],
+					"patching_rect" : [ 902.5, 474.0, 226.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.videoplane 0_main @scale 1.333 1."
 				}
@@ -11771,7 +11771,7 @@
 					"destination" : [ "obj-52", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1254.0, 475.0, 1254.666626, 475.0 ],
+					"midpoints" : [ 1254.0, 409.0, 1254.666626, 409.0 ],
 					"source" : [ "obj-60", 0 ]
 				}
 
@@ -11781,7 +11781,7 @@
 					"destination" : [ "obj-52", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1083.0, 475.0, 1083.333374, 475.0 ],
+					"midpoints" : [ 1083.0, 409.0, 1083.333374, 409.0 ],
 					"source" : [ "obj-63", 0 ]
 				}
 
