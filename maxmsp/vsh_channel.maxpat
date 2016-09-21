@@ -81,6 +81,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-32",
@@ -114,7 +115,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 56.5, 487.0, 74.0, 20.0 ],
-									"presentation_rect" : [ 21.5, 490.506714, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "ms per beat",
 									"textcolor" : [ 0.764706, 0.592157, 0.101961, 1.0 ]
@@ -129,7 +129,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 695.0, 826.0, 125.0, 33.0 ],
-									"presentation_rect" : [ 698.0, 826.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "total length in millisecons",
 									"textcolor" : [ 0.764706, 0.592157, 0.101961, 1.0 ]
@@ -1193,7 +1192,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-26", 4 ],
+									"destination" : [ "obj-26", 3 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-27", 0 ]
@@ -2545,6 +2544,15 @@
 					"hidden" : 0,
 					"midpoints" : [ 292.0, 455.0, 267.5, 455.0 ],
 					"source" : [ "obj-33", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-26", 2 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-33", 0 ]
 				}
 
 			}
