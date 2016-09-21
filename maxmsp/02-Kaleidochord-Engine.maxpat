@@ -402,7 +402,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 186.0, 198.0, 50.0, 35.0 ],
 									"style" : "",
-									"text" : "connected 0"
+									"text" : "connected 1"
 								}
 
 							}
@@ -579,7 +579,9 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 417.0, 416.0, 1349.0, 941.0 ],
+						"rect" : [ 110.0, 367.0, 1270.0, 1029.0 ],
+						"bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+						"editing_bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -695,7 +697,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 761.75, 602.0, 455.5, 22.0 ],
 									"style" : "",
-									"text" : "Macintosh HD:/Users/vk/remote/Videobass Recordings/Recording002.mov"
+									"text" : "Macintosh HD:/Users/vk/remote/Videobass Recordings/Recording000.mov"
 								}
 
 							}
@@ -3481,7 +3483,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 247.0, 273.0, 50.0, 35.0 ],
 									"style" : "",
-									"text" : "0.2"
+									"text" : "0."
 								}
 
 							}
@@ -3864,7 +3866,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1172.5, 708.0, 50.0, 22.0 ],
 									"style" : "",
-									"text" : "0.188235"
+									"text" : "0.239216"
 								}
 
 							}
@@ -7339,13 +7341,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-9",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 754.0, 426.0, 140.0, 22.0 ],
 									"style" : "",
-									"text" : "param theta 0."
+									"text" : "param offset 24.973547 11.185769"
 								}
 
 							}
@@ -10887,14 +10890,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-6",
-									"linecount" : 4,
+									"linecount" : 3,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 463.0, 381.0, 50.0, 49.0 ],
 									"style" : "",
-									"text" : "levels 0. 0. 0.710927 0."
+									"text" : "levels 0. 0. 0. 0."
 								}
 
 							}
