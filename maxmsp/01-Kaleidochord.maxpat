@@ -170,30 +170,37 @@
 						"vsh_ui_channel::h_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel::v_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel::sync" : [ 2, 0.5 ],
 						"vsh_ui_channel[1]::clip_live" : [ 2, 0.5 ],
 						"vsh_ui_channel[1]::h_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel[1]::v_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel[1]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[1]::sync" : [ 2, 0.5 ],
 						"vsh_ui_channel[2]::clip_live" : [ 2, 0.5 ],
 						"vsh_ui_channel[2]::h_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel[2]::v_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel[2]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[2]::sync" : [ 2, 0.5 ],
 						"vsh_ui_channel[3]::clip_live" : [ 2, 0.5 ],
 						"vsh_ui_channel[3]::h_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel[3]::v_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel[3]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[3]::sync" : [ 2, 0.5 ],
 						"vsh_ui_channel[4]::clip_live" : [ 2, 0.5 ],
 						"vsh_ui_channel[4]::h_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel[4]::v_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel[4]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[4]::sync" : [ 2, 0.5 ],
 						"vsh_ui_channel[5]::clip_live" : [ 2, 0.5 ],
 						"vsh_ui_channel[5]::h_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel[5]::v_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel[5]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[5]::sync" : [ 2, 0.5 ],
 						"vsh_ui_channel[6]::clip_live" : [ 2, 0.5 ],
 						"vsh_ui_channel[6]::h_flip" : [ 2, 0.5 ],
 						"vsh_ui_channel[6]::v_flip" : [ 2, 0.5 ],
-						"vsh_ui_channel[6]::invert" : [ 2, 0.5 ]
+						"vsh_ui_channel[6]::invert" : [ 2, 0.5 ],
+						"vsh_ui_channel[6]::sync" : [ 2, 0.5 ]
 					}
 ,
 					"maxclass" : "newobj",
@@ -226,7 +233,7 @@
 ,
 					"style" : "",
 					"text" : "pattrstorage",
-					"varname" : "u968000856"
+					"varname" : "u064000702"
 				}
 
 			}

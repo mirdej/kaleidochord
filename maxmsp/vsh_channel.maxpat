@@ -81,7 +81,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-32",
@@ -1839,7 +1838,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 128.0, -2.0, 72.0, 22.0 ],
+					"patching_rect" : [ 128.0, -3.0, 72.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess 1"
 				}
