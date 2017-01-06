@@ -7604,7 +7604,7 @@
 					"outlettype" : [ "int", "int", "int" ],
 					"patching_rect" : [ 511.682556, -3.0, 79.0, 22.0 ],
 					"style" : "",
-					"text" : "notein gnusb"
+					"text" : "notein \"gnusb #2\""
 				}
 
 			}

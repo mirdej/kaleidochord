@@ -61,7 +61,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 892.5, 67.0, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 70"
+					"text" : "ctlin \"gnusb #2\" 70"
 				}
 
 			}
@@ -75,7 +75,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 797.5, 67.0, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 71"
+					"text" : "ctlin \"gnusb #2\" 71"
 				}
 
 			}
@@ -9205,7 +9205,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 753.0, 687.5, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 66"
+					"text" : "ctlin \"gnusb #2\" 66"
 				}
 
 			}
@@ -9218,7 +9218,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 866.0, 687.5, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 62"
+					"text" : "ctlin \"gnusb #2\" 62"
 				}
 
 			}
@@ -9269,7 +9269,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 753.0, 609.5, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 65"
+					"text" : "ctlin \"gnusb #2\" 65"
 				}
 
 			}
@@ -9282,7 +9282,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 866.0, 609.5, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 61"
+					"text" : "ctlin \"gnusb #2\" 61"
 				}
 
 			}
@@ -9390,7 +9390,7 @@
 									"outlettype" : [ "int", "int", "int" ],
 									"patching_rect" : [ 50.0, 100.0, 79.0, 22.0 ],
 									"style" : "",
-									"text" : "notein gnusb"
+									"text" : "notein \"gnusb #2\""
 								}
 
 							}
@@ -9490,7 +9490,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 753.0, 534.0, 108.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 64"
+					"text" : "ctlin \"gnusb #2\" 64"
 				}
 
 			}
@@ -9503,7 +9503,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 866.0, 534.0, 103.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 60"
+					"text" : "ctlin \"gnusb #2\" 60"
 				}
 
 			}
@@ -9563,7 +9563,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 1041.0, 208.0, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 57"
+					"text" : "ctlin \"gnusb #2\" 57"
 				}
 
 			}
@@ -9639,7 +9639,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 916.0, 208.0, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 56"
+					"text" : "ctlin \"gnusb #2\" 56"
 				}
 
 			}
@@ -9842,7 +9842,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 184.5, 228.0, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 55"
+					"text" : "ctlin \"gnusb #2\" 55"
 				}
 
 			}
@@ -11185,7 +11185,7 @@
 									"outlettype" : [ "int", "int", "int" ],
 									"patching_rect" : [ 431.5, 53.0, 115.0, 22.0 ],
 									"style" : "",
-									"text" : "notein pedalognusb"
+									"text" : "notein pedalo\"gnusb #2\""
 								}
 
 							}
@@ -11878,7 +11878,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 225.5, 569.5, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 68"
+					"text" : "ctlin \"gnusb #2\" 68"
 				}
 
 			}
@@ -11986,7 +11986,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 512.0, 603.5, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 63"
+					"text" : "ctlin \"gnusb #2\" 63"
 				}
 
 			}
@@ -12063,7 +12063,7 @@
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 629.0, 603.5, 85.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb 67"
+					"text" : "ctlin \"gnusb #2\" 67"
 				}
 
 			}

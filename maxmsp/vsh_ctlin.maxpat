@@ -1316,7 +1316,7 @@
 					"outlettype" : [ "int", "int", "int" ],
 					"patching_rect" : [ 917.0, 89.0, 68.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb"
+					"text" : "ctlin \"gnusb #2\""
 				}
 
 			}
