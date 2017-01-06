@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 925.0, 435.0, 756.0, 524.0 ],
+		"rect" : [ 371.0, 351.0, 756.0, 524.0 ],
 		"bgcolor" : [ 0.168627, 0.168627, 0.168627, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -1009,9 +1009,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 443.0, 353.0, 223.0, 22.0 ],
+					"patching_rect" : [ 443.0, 353.0, 217.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.gl.videoplane proj @scale 1.777 1 . 1."
+					"text" : "jit.gl.videoplane proj @scale 1.37 1 . 1."
 				}
 
 			}
