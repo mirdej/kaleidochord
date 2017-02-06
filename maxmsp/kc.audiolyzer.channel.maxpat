@@ -3,7 +3,7 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 2,
+			"minor" : 3,
 			"revision" : 1,
 			"architecture" : "x86",
 			"modernui" : 1
@@ -380,9 +380,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "int", "int" ],
-					"patching_rect" : [ 509.0, 148.0, 68.0, 22.0 ],
+					"patching_rect" : [ 509.0, 148.0, 40.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin gnusb"
+					"text" : "ctlin"
 				}
 
 			}
