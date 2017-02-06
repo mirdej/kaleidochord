@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 2,
-			"revision" : 4,
+			"minor" : 3,
+			"revision" : 1,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 1484.0, 615.0 ],
+		"rect" : [ 347.0, 334.0, 1484.0, 615.0 ],
 		"bgcolor" : [ 0.094118, 0.086275, 0.094118, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -87,9 +87,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1136.0, 303.0, 50.0, 35.0 ],
+					"patching_rect" : [ 1136.0, 303.0, 38.0, 35.0 ],
 					"style" : "",
-					"text" : "0.16129"
+					"text" : "0.145"
 				}
 
 			}
@@ -1427,7 +1427,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 190.0, 230.0, 99.0, 22.0 ],
+					"patching_rect" : [ 351.5, 215.0, 99.0, 22.0 ],
 					"style" : "",
 					"text" : "route open close"
 				}
@@ -1789,8 +1789,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 2,
-							"revision" : 4,
+							"minor" : 3,
+							"revision" : 1,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1939,8 +1939,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 7,
-											"minor" : 2,
-											"revision" : 4,
+											"minor" : 3,
+											"revision" : 1,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -2595,9 +2595,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 8.0, 230.0, 226.0, 21.0 ],
+					"patching_rect" : [ 12.0, 228.0, 218.0, 21.0 ],
 					"style" : "",
-					"text" : "jit.qt.grab 640 480 @unique 1 @engine qt"
+					"text" : "jit.grab 640 480 @unique 1 @engine avf"
 				}
 
 			}
@@ -3424,7 +3424,7 @@
 					"destination" : [ "obj-62", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 239.5, 264.0, 265.5, 264.0 ],
+					"midpoints" : [ 401.0, 264.0, 265.5, 264.0 ],
 					"source" : [ "obj-56", 1 ]
 				}
 

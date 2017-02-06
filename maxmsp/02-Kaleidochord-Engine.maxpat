@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 66.0, 79.0, 1533.0, 987.0 ],
+		"rect" : [ 66.0, 79.0, 1151.0, 987.0 ],
 		"bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 		"editing_bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 		"bglocked" : 0,
@@ -3883,7 +3883,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 247.0, 273.0, 50.0, 35.0 ],
 									"style" : "",
-									"text" : "0.184314"
+									"text" : "0.105882"
 								}
 
 							}
@@ -4259,13 +4259,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-45",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1172.5, 708.0, 50.0, 22.0 ],
 									"style" : "",
-									"text" : "0."
+									"text" : "0.172549"
 								}
 
 							}
@@ -7707,14 +7708,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-9",
-									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 754.0, 426.0, 140.0, 22.0 ],
 									"style" : "",
-									"text" : "param offset 53.617016 0."
+									"text" : "param theta 3.474678"
 								}
 
 							}
@@ -11256,14 +11256,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-6",
-									"linecount" : 8,
+									"linecount" : 4,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 463.0, 381.0, 50.0, 49.0 ],
 									"style" : "",
-									"text" : "levels 0. 0.996078 0.042968 0.996078"
+									"text" : "levels 0. 0. 0.996078 0."
 								}
 
 							}
