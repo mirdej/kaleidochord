@@ -1313,10 +1313,10 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "int" ],
-					"patching_rect" : [ 917.0, 91.0, 40.0, 22.0 ],
+					"outlettype" : [ "int", "int", "" ],
+					"patching_rect" : [ 917.0, 90.0, 74.0, 22.0 ],
 					"style" : "",
-					"text" : "cctlin"
+					"text" : "cctlin gnusb"
 				}
 
 			}

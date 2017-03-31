@@ -3681,7 +3681,7 @@
 ,
 					"style" : "",
 					"text" : "pattrstorage",
-					"varname" : "u481004252"
+					"varname" : "u858003836"
 				}
 
 			}
@@ -10013,7 +10013,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "standard",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"hidden" : 1,
