@@ -208,7 +208,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1383.0, 361.0, 264.0, 22.0 ],
-									"presentation_rect" : [ 1458.5, 336.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "text MODE, texton MODE, bgcolor 0.1 0.1 0.1 1"
 								}
@@ -222,7 +221,6 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "" ],
 									"patching_rect" : [ 1369.5, 309.0, 46.0, 22.0 ],
-									"presentation_rect" : [ 1354.5, 330.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "sel 1 0"
 								}
@@ -855,7 +853,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1524.25, 498.0, 259.0, 22.0 ],
-									"presentation_rect" : [ 1523.5, 498.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "text SCRUB, texton SCRUB, bgcolor 0 0 0 1, 0"
 								}
@@ -1606,12 +1603,12 @@
 				"box" : 				{
 					"id" : "obj-28",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 0,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "int", "int" ],
-					"patching_rect" : [ 70.187073, 451.0, 65.0, 22.0 ],
+					"patching_rect" : [ 70.187073, 451.0, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "notein"
+					"text" : "nnotein"
 				}
 
 			}
@@ -7599,12 +7596,12 @@
 				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 0,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "int", "int" ],
-					"patching_rect" : [ 511.682556, -3.0, 79.0, 22.0 ],
+					"patching_rect" : [ 511.682556, -3.0, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "notein \"gnusb #2\""
+					"text" : "nnotein"
 				}
 
 			}
@@ -8410,7 +8407,7 @@
 					"destination" : [ "obj-21", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 551.182556, 80.0, 538.182556, 80.0 ],
+					"midpoints" : [ 536.682556, 80.0, 538.182556, 80.0 ],
 					"source" : [ "obj-17", 1 ]
 				}
 
@@ -8603,7 +8600,7 @@
 					"destination" : [ "obj-98", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 102.687073, 504.0, 96.687073, 504.0 ],
+					"midpoints" : [ 95.187073, 504.0, 96.687073, 504.0 ],
 					"source" : [ "obj-28", 1 ]
 				}
 
@@ -9278,7 +9275,19 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "nnotein.maxpat",
+				"bootpath" : "~/Documents/Max 7/kaleidochord/maxmsp",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "vsh_ctlin.maxpat",
+				"bootpath" : "~/Documents/Max 7/kaleidochord/maxmsp",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cctlin.maxpat",
 				"bootpath" : "~/Documents/Max 7/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1

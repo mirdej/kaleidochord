@@ -245,12 +245,12 @@
 				"box" : 				{
 					"id" : "obj-74",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 0,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "int", "int" ],
-					"patching_rect" : [ 458.25, 118.0, 43.0, 22.0 ],
+					"patching_rect" : [ 458.25, 118.0, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "notein"
+					"text" : "nnotein"
 				}
 
 			}
@@ -929,6 +929,12 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "kc.audiolyzer.channel.maxpat",
+				"bootpath" : "~/Documents/Max 7/kaleidochord/maxmsp",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "nnotein.maxpat",
 				"bootpath" : "~/Documents/Max 7/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
