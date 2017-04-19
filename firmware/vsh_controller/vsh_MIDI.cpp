@@ -34,8 +34,10 @@
 /*---------------------------------------------------------------------------*/
 /* PUT MIDI DATA INTO SEND-QUEUE                                             */ 
 /*---------------------------------------------------------------------------*/
-void MIDIClass::write(unsigned char command, unsigned char pitch,unsigned char velocity){
-
+void MIDIClass::write(unsigned char command, unsigned char pitch,unsigned char velocity, unsigned char channel){
+	if (channel > 0) channel--;
+	channel %= 16;
+	
 	// see if this command is already in queue, replace value
 	/*for (unsigned char i = 0; i < MIDI_MAX_BUFFER; i++) {
 		if (_midiSendQueue[3*i] == command) {
@@ -46,7 +48,7 @@ void MIDIClass::write(unsigned char command, unsigned char pitch,unsigned char v
 		}
 	}
 	*/
-	_midiSendQueue[_midiSendEnqueueIdx++] = command;
+	_midiSendQueue[_midiSendEnqueueIdx++] = command | channel;
 	_midiSendQueue[_midiSendEnqueueIdx++] = pitch;
 	_midiSendQueue[_midiSendEnqueueIdx++] = velocity;
 	

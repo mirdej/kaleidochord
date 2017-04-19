@@ -171,7 +171,7 @@ void loop() {
 	
 	
 	if (calibrating_state == STATE_SET_THRESHES) {
-		threshold[mux] 	= temp + 5;
+		threshold[mux] 	= temp + 10;
 		bottom[mux] 	= threshold[mux] + 1;
 		top[mux] 		= threshold[mux] + 100;
 	}

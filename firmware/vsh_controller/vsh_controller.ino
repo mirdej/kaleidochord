@@ -50,7 +50,7 @@ void MIDIwrite(unsigned char a, unsigned char b, unsigned char c) {
 			cmd = a;
 
 			midiOutData[0] = ((cmd >>4 ) & 0x0F) | ((cmd << 4) & 0xF0); //swap high/low nibble
-			midiOutData[1] = cmd;
+			midiOutData[1] = cmd | 12;
 			midiOutData[2] = b;
 			midiOutData[3] = c;
 			

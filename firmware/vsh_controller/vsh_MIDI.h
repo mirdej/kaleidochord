@@ -58,6 +58,7 @@ typedef struct {
 	unsigned char command;
 	unsigned char key;
 	unsigned char value;
+	unsigned char channel;
 } MIDIMessage;
 
 #define DEC 10
@@ -73,7 +74,8 @@ typedef struct {
 class MIDIClass {
 
 public:
-	void write(uint8_t,uint8_t,uint8_t);
+	//void write(uint8_t,uint8_t,uint8_t);
+	void write(uint8_t,uint8_t,uint8_t,uint8_t = 0);
 	uint8_t read(MIDIMessage*);
 	size_t print(const char *);
     size_t print(char, int = DEC);
