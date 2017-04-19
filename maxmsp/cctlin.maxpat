@@ -80,11 +80,11 @@
 					"id" : "obj-110",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 114.0, 175.0, 63.0, 22.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 114.0, 175.0, 65.0, 22.0 ],
 					"style" : "",
-					"text" : "ctlin -1 13"
+					"text" : "ctlin #1 13"
 				}
 
 			}
@@ -95,15 +95,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-110", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-110", 1 ]
 				}
 
 			}
