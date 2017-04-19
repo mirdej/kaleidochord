@@ -664,7 +664,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 951.0, 35.0, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 70"
@@ -678,7 +678,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 797.5, 67.0, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 71"
@@ -3648,7 +3648,7 @@
 ,
 					"style" : "",
 					"text" : "pattrstorage",
-					"varname" : "u718004411"
+					"varname" : "u575003626"
 				}
 
 			}
@@ -9897,7 +9897,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 753.0, 687.5, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 66"
@@ -9910,7 +9910,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 866.0, 687.5, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 62"
@@ -9961,7 +9961,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 753.0, 609.5, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 65"
@@ -9974,7 +9974,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 866.0, 609.5, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 61"
@@ -10183,7 +10183,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 753.0, 534.0, 108.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 64"
@@ -10196,7 +10196,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 866.0, 534.0, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 60"
@@ -10256,7 +10256,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 1041.0, 208.0, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 57"
@@ -10332,7 +10332,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 916.0, 208.0, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 56"
@@ -10535,7 +10535,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 184.5, 228.0, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 55"
@@ -11456,6 +11456,32 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-35",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 416.5, 70.0, 34.0, 22.0 ],
+									"style" : "",
+									"text" : "gate"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-25",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"patching_rect" : [ 477.0, 43.0, 40.0, 22.0 ],
+									"style" : "",
+									"text" : "== 11"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-34",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -11513,19 +11539,6 @@
 									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 299.0, 305.0, 24.0, 24.0 ],
 									"style" : ""
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-4",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 336.0, 167.0, 50.0, 22.0 ],
-									"style" : "",
-									"text" : "55"
 								}
 
 							}
@@ -11882,14 +11895,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-38",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "int", "int" ],
-									"patching_rect" : [ 431.5, 53.0, 115.0, 22.0 ],
+									"patching_rect" : [ 431.5, 7.0, 43.0, 22.0 ],
 									"style" : "",
-									"text" : "notein \"pedalognusb #2\""
+									"text" : "notein"
 								}
 
 							}
@@ -12231,6 +12243,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-35", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-25", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-11", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -12325,6 +12346,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-42", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-35", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-14", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -12334,10 +12364,18 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 1 ],
+									"destination" : [ "obj-25", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"order" : 1,
+									"source" : [ "obj-38", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-35", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
 									"source" : [ "obj-38", 0 ]
 								}
 
@@ -12348,16 +12386,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-38", 1 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-42", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"order" : 0,
-									"source" : [ "obj-38", 0 ]
 								}
 
 							}
@@ -12600,7 +12628,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 225.5, 569.5, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 68"
@@ -12708,7 +12736,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 512.0, 603.5, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 63"
@@ -12785,7 +12813,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "" ],
+					"outlettype" : [ "int", "", "" ],
 					"patching_rect" : [ 629.0, 603.5, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "cctlin 67"
@@ -12848,7 +12876,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 530.0, 198.0, 28.0, 17.0 ],
+					"patching_rect" : [ 530.0, 195.0, 28.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 1027.266479, 310.0, 28.0, 17.0 ],
 					"style" : "",
@@ -14245,13 +14273,13 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "cctlin.maxpat",
+				"name" : "vsh_stringin.maxpat",
 				"bootpath" : "~/Documents/development/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "vsh_stringin.maxpat",
+				"name" : "cctlin.maxpat",
 				"bootpath" : "~/Documents/development/kaleidochord/maxmsp",
 				"type" : "JSON",
 				"implicit" : 1
